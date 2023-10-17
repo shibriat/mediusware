@@ -12,6 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            $table->index('id');
             $table->bigIncrements('id');
             $table->string('name');
             $table->enum('account_type', ['Individual', 'Business']);
