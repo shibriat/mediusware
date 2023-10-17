@@ -88,7 +88,7 @@
                         </li>
                         <li class="nav-header">SERVICE</li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('deposit') }}" class="nav-link">
                                 <i class="nav-icon fas fa-tools"></i>
                                 <p>
                                     Deposit
@@ -96,7 +96,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('withdrawal') }}" class="nav-link">
                                 <i class="nav-icon fas fa-tools"></i>
                                 <p>
                                     Withdrawal
