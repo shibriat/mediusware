@@ -21,6 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/deposit', [App\Http\Controllers\DepositController::class, 'index'])->name('deposit');
 Route::get('/deposit/create', [App\Http\Controllers\DepositController::class, 'create'])->name('deposit.create');
 Route::post('/deposit/create', [App\Http\Controllers\DepositController::class, 'store'])->name('deposit.store');

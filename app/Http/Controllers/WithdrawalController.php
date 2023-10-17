@@ -26,10 +26,13 @@ class WithdrawalController extends Controller
      */
     public function index()
     {
-       $withdrawals = Transaction::where('transaction_type', 'Withdrawal')->get();
-       return view('withdrawal_transaction', compact('withdrawals'));
+        $user_id = Auth::id();
+        $withdrawals = Transaction::where('transaction_type', 'Withdrawal')
+            ->where('user_id', $user_id)
+            ->get();
+        return view('withdrawal_transaction', compact('withdrawals'));
     }
-     public function create()
+    public function create()
     {
         return view('withdrawal');
     }

@@ -26,7 +26,12 @@ class DepositController extends Controller
      */
     public function index()
     {
-        $deposits = Transaction::where('transaction_type', 'Deposit')->get();
+        $user_id = Auth::id();
+
+        $deposits = Transaction::where('transaction_type', 'Deposit')
+            ->where('user_id', $user_id)
+            ->get();
+
         return view('deposit_transactions', compact('deposits'));
     }
 

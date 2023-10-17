@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="number" step="0.01" class="form-control" name="balance" value="0" placeholder="Balance">
+                        <input type="hidden" step="0.01" class="form-control" name="balance" value="0" placeholder="Balance">
                     </div>
 
                     <div class="input-group mb-3">
