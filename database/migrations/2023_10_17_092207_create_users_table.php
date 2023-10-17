@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->enum('account_type', ['savings', 'checking']);
+            $table->enum('account_type', ['Individual', 'Business']);
             $table->double('balance', 15, 2);
             $table->string('email')->unique();
             $table->string('password');
