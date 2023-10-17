@@ -25,7 +25,7 @@
                     <div class="col-12">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Make Withdrawak</h3>
+                                    <h3 class="card-title">Make Withdrawals</h3>
                                 </div>
                         <form action="{{ route('withdrawal.store') }}" method="post">
                             @csrf

@@ -73,6 +73,13 @@
 
             <!-- Sidebar -->
             <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="info">
+                        <p class="text-white" style="margin: 0; font-size: 18px;">
+                            <i class="fas fa-balance-scale"></i> Balance: ${{ $user->balance }}
+                        </p>
+                    </div>
+                </div>
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
@@ -89,7 +96,7 @@
                         <li class="nav-header">SERVICE</li>
                         <li class="nav-item">
                             <a href="{{ route('deposit') }}" class="nav-link">
-                                <i class="nav-icon fas fa-tools"></i>
+                                <i class="nav-icon fas fa-money-bill-wave"></i>
                                 <p>
                                     Deposit
                                 </p>
@@ -97,7 +104,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('withdrawal') }}" class="nav-link">
-                                <i class="nav-icon fas fa-tools"></i>
+                                <i class="nav-icon fas fa-hand-holding-usd"></i>
                                 <p>
                                     Withdrawal
                                 </p>
@@ -105,7 +112,7 @@
                         </li>
                         <li class="nav-header">REPORTS</li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('transaction') }}" class="nav-link">
                                 <i class="nav-icon fas fa-scroll"></i>
                                 <p>
                                     Transactions

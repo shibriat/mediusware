@@ -9,7 +9,7 @@
                <div class="col-sm-6">
                    <ol class="breadcrumb float-sm-right">
                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                       <li class="breadcrumb-item active">List of Deposits</li>
+                       <li class="breadcrumb-item active">List of Withdrawals</li>
                    </ol>
                </div>
            </div>
@@ -21,8 +21,8 @@
                <div class="col-12">
                    <div class="card">
                        <div class="card-header">
-                           <h3 class="card-title">List of Deposits</h3>
-                           <a href="{{ route('deposit.create') }}" class="btn btn-primary float-right">Add Deposit</a>
+                           <h3 class="card-title">List of Withdrawals</h3>
+                           <a href="{{ route('withdrawal.create') }}" class="btn btn-primary float-right">Add Withdrawal</a>
                        </div>
                        <div class="card-body">
                            <table class="table table-bordered">
@@ -31,16 +31,14 @@
                                        <th>ID</th>
                                        <th>Amount</th>
                                        <th>Date</th>
-                                       <!-- Add more table headers as needed -->
                                    </tr>
                                </thead>
                                <tbody>
-                                   @foreach($deposits as $deposit)
+                                   @foreach($withdrawals as $withdrawal)
                                    <tr>
-                                       <td>{{ $deposit->id }}</td>
-                                       <td>{{ $deposit->amount }}</td>
-                                       <td>{{ $deposit->date }}</td>
-                                       <!-- Add more table data cells as needed -->
+                                       <td>{{ $withdrawal->id }}</td>
+                                       <td>{{ $withdrawal->amount }}</td>
+                                       <td>{{ $withdrawal->date }}</td>
                                    </tr>
                                    @endforeach
                                </tbody>

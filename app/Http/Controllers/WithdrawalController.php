@@ -27,7 +27,7 @@ class WithdrawalController extends Controller
     public function index()
     {
        $withdrawals = Transaction::where('transaction_type', 'Withdrawal')->get();
-       return view('withdrawal_transactions', compact('withdrawals'));
+       return view('withdrawal_transaction', compact('withdrawals'));
     }
      public function create()
     {
@@ -85,9 +85,9 @@ class WithdrawalController extends Controller
             $transaction->save();
             $user->save();
 
-            return redirect()->route('deposit')->with('success', 'Withdrawal transaction created successfully');
+            return redirect()->route('withdrawal')->with('success', 'Withdrawal transaction created successfully');
         } else {
-            return redirect()->route('deposit')->with('error', 'Insufficient balance for withdrawal');
+            return redirect()->route('withdrawal')->with('error', 'Insufficient balance for withdrawal');
         }
     }
 

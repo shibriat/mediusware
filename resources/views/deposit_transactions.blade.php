@@ -31,7 +31,6 @@
                                        <th>ID</th>
                                        <th>Amount</th>
                                        <th>Date</th>
-                                       <!-- Add more table headers as needed -->
                                    </tr>
                                </thead>
                                <tbody>
@@ -40,7 +39,6 @@
                                        <td>{{ $deposit->id }}</td>
                                        <td>{{ $deposit->amount }}</td>
                                        <td>{{ $deposit->date }}</td>
-                                       <!-- Add more table data cells as needed -->
                                    </tr>
                                    @endforeach
                                </tbody>
